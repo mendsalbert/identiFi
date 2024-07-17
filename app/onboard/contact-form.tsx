@@ -4,15 +4,7 @@ import { useState, useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { Computer, ScreenShare, Share, Smile } from "lucide-react";
 import Image from "next/image";
-import { Checkbox } from "@/components/ui/checkbox";
-import {
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import {
   IconBrandInstagram,
   IconBrandLinkedin,
@@ -25,30 +17,19 @@ import {
   IconPhone,
 } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormItem, FormLabel } from "@/components/ui/form";
 import CustomImageUploader from "@/components/ui/custom-image-uploader";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
-import { PiCheckLight } from "react-icons/pi";
 import Select from "react-select";
 import makeAnimated, { Placeholder } from "react-select/animated";
 import {
   getUserByAddress,
-  getUserByUsername,
   createUser,
   getUsernameByAddress,
-  editUser,
 } from "@/utils/queries";
-import { userInfo } from "os";
+
 import { useWallets } from "@privy-io/react-auth";
 import Link from "next/link";
 import { Toaster } from "@/components/ui/toaster";
@@ -115,7 +96,7 @@ type FormValues = z.infer<typeof FormSchema>;
 
 export default function CreateProile() {
   const [countryCode, setCountryCode] = useState("");
-  const { ready, wallets } = useWallets();
+  const { wallets } = useWallets();
 
   useEffect(() => {
     const fetchCountryCode = async () => {
@@ -127,7 +108,6 @@ export default function CreateProile() {
         console.error("Error fetching country code:", error);
       }
     };
-
     fetchCountryCode();
   }, []);
 
@@ -278,8 +258,6 @@ export default function CreateProile() {
 
   const handleChange = (name: string, value: any) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
-
-    // Validate input fields in real-time
     let error = "";
     if (name === "email" && value && !/.+@.+\..+/.test(value)) {
       error = "Invalid email address";
@@ -362,60 +340,39 @@ export default function CreateProile() {
     { value: "civil-engineering", label: "Civil Engineering" },
   ];
 
-  const socialMediaPlatforms = [
-    { name: "x", icon: <IconBrandX width={24} height={24} color="white" /> },
-    {
-      name: "instagram",
-      icon: <IconBrandInstagram width={24} height={24} color="white" />,
-    },
-    {
-      name: "youtube",
-      icon: <IconBrandYoutube width={24} height={24} color="white" />,
-    },
-    {
-      name: "tiktok",
-      icon: <IconBrandTiktok width={24} height={24} color="white" />,
-    },
-    {
-      name: "linkedin",
-      icon: <IconBrandLinkedin width={24} height={24} color="white" />,
-    },
-  ];
-
   const customStyles = {
     control: (provided: any, state: any) => ({
       ...provided,
-      borderColor: state.isFocused ? "#000000" : "#d1d5db", // TailwindCSS gray-300
-      boxShadow: state.isFocused ? "0 0 0 1px #d1d5db" : "none", // Remove default shadow
+      borderColor: state.isFocused ? "#000000" : "#d1d5db",
+      boxShadow: state.isFocused ? "0 0 0 1px #d1d5db" : "none",
       "&:hover": {
-        borderColor: "#d1d5db", // TailwindCSS gray-300
+        borderColor: "#d1d5db",
       },
-      borderRadius: "0.375rem", // TailwindCSS rounded-md
-      paddingTop: "0.2rem", // TailwindCSS py-2 (top padding)
-      paddingBottom: "0.2rem", // TailwindCSS py-2 (bottom padding)
+      borderRadius: "0.375rem",
+      paddingTop: "0.2rem",
+      paddingBottom: "0.2rem",
     }),
     multiValue: (provided: any) => ({
       ...provided,
-      backgroundColor: "#e5e7eb", // TailwindCSS gray-200
+      backgroundColor: "#e5e7eb",
     }),
     multiValueLabel: (provided: any) => ({
       ...provided,
-      color: "#374151", // TailwindCSS gray-700
+      color: "#374151",
     }),
     multiValueRemove: (provided: any) => ({
       ...provided,
-      color: "#6b7280", // TailwindCSS gray-500
+      color: "#6b7280",
       "&:hover": {
-        color: "#4b5563", // TailwindCSS gray-700
+        color: "#4b5563",
       },
     }),
   };
 
   const [selectedOptions, setSelectedOptions] = useState([]);
-  const [imageUrls, setImageUrls] = useState("/images/avatar.jpeg");
 
   const handleImagesChange = async (files: any) => {
-    const file = files[0]; // Only handling one image
+    const file = files[0];
     try {
       const form = new FormData();
       form.append("file", file);

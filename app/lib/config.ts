@@ -1,8 +1,5 @@
-// lib/config.ts
-
 import { defaultWagmiConfig } from "@web3modal/wagmi/react/config";
 import { cookieStorage, createStorage } from "wagmi";
-import { mainnet, sepolia } from "wagmi/chains";
 
 export const projectId = "6a1ea1cb75d52415bb4110fa68566498";
 

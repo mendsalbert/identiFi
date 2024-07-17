@@ -1,12 +1,11 @@
 import Navbar from "@/components/navbar/navbar";
-import DashboardC from "./dashboard";
-import Footer from "@/components/footer";
+import DashboardComponent from "./dashboard";
 
 const Dashboard = () => {
   return (
     <div>
       <Navbar />
-      <DashboardC />
+      <DashboardComponent />
     </div>
   );
 };

@@ -18,7 +18,7 @@ createWeb3Modal({
   wagmiConfig: config,
   projectId,
   defaultChain: zkEVMCardonaTestnet,
-  enableAnalytics: true, // Optional
+  enableAnalytics: true,
   themeMode: "light",
 });
 
@@ -34,7 +34,7 @@ export const WagmiProviderComp = ({
       new QueryClient({
         defaultOptions: {
           queries: {
-            refetchOnWindowFocus: false, // configure as per your needs
+            refetchOnWindowFocus: false,
           },
         },
       })

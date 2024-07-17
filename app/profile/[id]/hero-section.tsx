@@ -233,11 +233,6 @@ const HeroSection = (params: any) => {
                   </p>
                   <p className="text-sm ">
                     {formData.info || "We making digital Identity easier..."}
-                    {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Delectus dolorum dolores perspiciatis aspernatur
-                    repellendus, commodi quaerat explicabo distinctio voluptatum
-                    similique nesciunt placeat iure voluptas quam nobis facilis!
-                    Iusto, harum pariatur. */}
                   </p>
                   <div className="grid grid-cols-2 pt-3 gap-2">
                     <div className="py-2">
@@ -342,8 +337,7 @@ const HeroSection = (params: any) => {
             </div>
           </div>
         </div>
-        {/* </BackgroundGradientAnimation> */}
-      </div>{" "}
+      </div>
     </div>
   );
 };

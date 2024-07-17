@@ -44,18 +44,6 @@ const Footer = () => {
             <div>Verify Credentials</div>
           </div>
         </div>
-
-        {/* <div className="flex-col space-y-6 flex ">
-          <div className="pt-10 font-medium">FOR BUSINESS</div>
-          <div className="font-light space-y-4 text-sm">
-            <div>Project Management</div>
-            <div>Goal Management</div>
-
-            <div>Increase Productivity</div>
-            <div>Work Management</div>
-            <div>Project Planning</div>
-          </div> */}
-        {/* </div> */}
       </div>
     </div>
   );
