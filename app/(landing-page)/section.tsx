@@ -1,16 +1,10 @@
 import {
-  PiAirplaneFill,
   PiArrowRight,
-  PiCalendarCheckFill,
   PiCheckCircleFill,
   PiClipboardLight,
-  PiFlag,
-  PiFlagCheckeredFill,
   PiHouseFill,
-  PiHouseLight,
   PiShareLight,
   PiUserCheck,
-  PiWatchFill,
 } from "react-icons/pi";
 import Image from "next/image";
 
@@ -63,7 +57,7 @@ const items = [
   },
 ];
 
-const SeventhSection = () => {
+const Section = () => {
   return (
     <>
       <div className="flex flex-col pt-32  items-center justify-center">
@@ -119,4 +113,4 @@ const SeventhSection = () => {
   );
 };
 
-export default SeventhSection;
+export default Section;
