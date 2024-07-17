@@ -1,0 +1,177 @@
+html,
+body,
+:root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wallpaper {
+  background-image: url("https://9to5mac.com/wp-content/uploads/sites/6/2020/06/wwdc6.jpg?quality=82&strip=all");
+}
+
+.bg-frosted {
+  backdrop-filter: blur(5px);
+  background-color: rgb(255 255 255/ 20%);
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Add this to your CSS file, e.g., src/index.css */
+.react-select__control {
+  /* @apply border-input rounded-lg shadow-sm; */
+  @apply border-input rounded-lg shadow-sm;
+}
+.react-select__multi-value {
+  @apply bg-gray-200 rounded-md;
+}
+.react-select__multi-value__label {
+  @apply text-gray-300;
+}
+.react-select__multi-value__remove {
+  @apply text-gray-500 hover:text-gray-700;
+}
+.text-red-500 {
+  color: #f56565;
+}
+.text-xs {
+  font-size: 0.75rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.id-card-hook {
+  background-color: #000;
+  width: 70px;
+  margin: 0 auto;
+  height: 15px;
+  border-radius: 5px 5px 0 0;
+}
+.id-card-hook:after {
+  content: "";
+  background-color: #ffff;
+  width: 47px;
+  height: 6px;
+  display: block;
+  margin: 0px auto;
+  position: relative;
+  top: 6px;
+  border-radius: 4px;
+}
+
+.id-card-tag-strip {
+  width: 45px;
+  height: 40px;
+  background-color: #38b9f7;
+  margin: 0 auto;
+  border-radius: 5px;
+  position: relative;
+  top: 9px;
+  z-index: 1;
+  border: 1px solid #3b97f6;
+}
+.id-card-tag-strip:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #c1c1c1;
+  position: relative;
+  top: 10px;
+}
+.id-card-tag {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 100px solid #3b97f6;
+  margin: -10px auto -30px auto;
+}
+.id-card-tag:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid #ffff;
+  margin: -10px auto -30px auto;
+  position: relative;
+  top: -130px;
+  left: -50px;
+}
