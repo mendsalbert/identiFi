@@ -15,18 +15,8 @@ export default function ContactForm() {
       name: "Edit Profile",
       component: <EditProfile />,
     },
-    {
-      name: "Jobs",
-      component: (
-        <>
-          <p>No Jobs</p>
-        </>
-      ),
-    },
   ];
 
-  //tabs
-  const ref = useRef(null);
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
