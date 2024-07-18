@@ -12,13 +12,7 @@ import { useInView } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
 import { useState } from "react";
-import {
-  PiArrowRight,
-  PiBookOpenTextLight,
-  PiFileThin,
-  PiSparkleLight,
-  PiTargetLight,
-} from "react-icons/pi";
+import { PiArrowRight } from "react-icons/pi";
 import {
   IconBriefcase,
   IconIdBadge2,
@@ -175,8 +169,6 @@ const HeroSection = () => {
                 <div className="flex items-center">
                   <div>{tab.icon}</div>
                   <div className="text-2xl font-medium">{tab.name}</div>
-
-                  {/* Render feature tag only for "AI" tab */}
                 </div>
 
                 <motion.div
@@ -186,7 +178,6 @@ const HeroSection = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <div>
-                    {/* Only animate the description */}
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -195,11 +186,6 @@ const HeroSection = () => {
                       {tab.description}
                     </motion.div>
                   </div>
-
-                  {/* Conditional rendering for "Learn more" link */}
-                  {/* {activeTab === tab && (
-                 <div className="text-sm mt-2">{tab.more}</div>
-               )} */}
                 </motion.div>
               </div>
             </motion.div>
@@ -232,8 +218,6 @@ const HeroSection = () => {
                 <div className="flex items-center">
                   <div>{tab.icon}</div>
                   <div className="text-2xl font-medium">{tab.name}</div>
-
-                  {/* Render feature tag only for "AI" tab */}
                 </div>
 
                 <motion.div
@@ -243,7 +227,6 @@ const HeroSection = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <div>
-                    {/* Only animate the description */}
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -252,11 +235,6 @@ const HeroSection = () => {
                       {tab.description}
                     </motion.div>
                   </div>
-
-                  {/* Conditional rendering for "Learn more" link */}
-                  {/* {activeTab === tab && (
-                    <div className="text-sm mt-2">{tab.more}</div>
-                  )} */}
                 </motion.div>
               </div>
             </motion.div>
