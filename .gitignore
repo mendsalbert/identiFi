@@ -33,7 +33,7 @@ legacySol
 secrete.txt
 # vercel
 .vercel
-
+project-guide.txt
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -16,10 +16,10 @@ import {
 import { useWallets } from "@privy-io/react-auth";
 
 import UserProfileDisplay from "./components/user-profile-display";
-// import CustomImageUploader from "./components/image-upload";
 import SocialMediaInputs from "./components/social-media-inputs";
 import FormFields from "./components/form-fields";
 import CustomImageUploader from "@/components/ui/custom-image-uploader";
+
 import { Toaster } from "@/components/ui/toaster";
 import { FormSchema, FormValues } from "@/utils/formSchema";
 import { options } from "@/utils/options";

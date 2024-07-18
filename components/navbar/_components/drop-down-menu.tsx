@@ -6,33 +6,8 @@ import { usePrivy } from "@privy-io/react-auth";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion } from "@/components/ui/accordion";
 
-import {
-  BarChart,
-  Building2,
-  Code,
-  Code2Icon,
-  DollarSign,
-  Download,
-  GraduationCap,
-  Headphones,
-  Home,
-  Newspaper,
-  PaintBucket,
-  Settings,
-  Smile,
-  Sparkles,
-  ScreenShare,
-  Users,
-  UserPlus,
-  ArrowRight,
-} from "lucide-react";
 import { getUserByAddress } from "@/utils/queries";
 
 interface DropDownMenuProps {
@@ -75,7 +50,8 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
             flex-1
             items-center 
             justify-between
-     mt-11
+           
+            mt-11
            pt-2
             py-4
             
@@ -93,8 +69,6 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
             items-center 
             justify-between
             border-b
-          
-         
             py-4
           
       

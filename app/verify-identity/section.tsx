@@ -24,7 +24,7 @@ import { Input } from "@/components/ui/input";
 import { IconZoomCheck } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 
-const HeroSection = () => {
+const Section = () => {
   const ref = useRef(null);
   const router = useRouter();
 
@@ -115,4 +115,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Section;

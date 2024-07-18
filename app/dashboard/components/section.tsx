@@ -96,7 +96,7 @@ const tabs = [
   },
 ];
 
-const HeroSection = () => {
+const Section = () => {
   const [formData, setFormData] = useState<any>({
     first_name: "",
     last_name: "",
@@ -346,4 +346,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Section;

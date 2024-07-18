@@ -327,7 +327,7 @@ export default function EditProfile() {
                     style={{ height: "100px" }}
                     onChange={(e) => handleChange("info", e.target.value)}
                     value={formData.info}
-                    className="form-textarea mt-1 block w-full"
+                    className="form-textarea border p-2 border-gray-300 focus:outline-black rounded-md mt-1 block w-full"
                   />
                 </FormControl>
               </FormItem>

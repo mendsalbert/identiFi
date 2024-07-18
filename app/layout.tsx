@@ -1,12 +1,7 @@
 "use client";
 import { defineChain } from "viem";
-// import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-// import WagmiProviderComp from "./lib/wagmi-provider";
-// import { config } from "./lib/config";
-// import { headers } from "next/headers";
-// import { cookieToInitialState } from "wagmi";
 
 import { PrivyProvider } from "@privy-io/react-auth";
 const font = Outfit({ subsets: ["latin"] });

@@ -1,11 +1,9 @@
-import Navbar from "@/components/navbar/navbar";
-import HeroSection from "./hero-section";
-import Footer from "@/components/footer";
+import Section from "./section";
 
 const VerifyIdentiy = () => {
   return (
     <div className="w-full">
-      <HeroSection />
+      <Section />
     </div>
   );
 };
