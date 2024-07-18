@@ -177,7 +177,6 @@ const HeroSection = () => {
 
   return (
     <div className="md:items-center items-center flex flex-col w-full">
-      {/* <BackgroundGradientAnimation className="md:items-center flex flex-col"> */}
       <div className="flex flex-col items-center">
         <div className="id-card-tag"></div>
         <div className="id-card-tag-strip"></div>
@@ -238,11 +237,6 @@ const HeroSection = () => {
                   </p>
                   <p className="text-sm ">
                     {formData.info || "We making digital Identity easier..."}
-                    {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Delectus dolorum dolores perspiciatis aspernatur
-                    repellendus, commodi quaerat explicabo distinctio voluptatum
-                    similique nesciunt placeat iure voluptas quam nobis facilis!
-                    Iusto, harum pariatur. */}
                   </p>
                   <div className="grid grid-cols-2 pt-3 gap-2">
                     <div className="py-2">
@@ -347,7 +341,6 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        {/* </BackgroundGradientAnimation> */}
       </div>{" "}
     </div>
   );

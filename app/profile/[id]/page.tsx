@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "@/components/navbar/navbar";
-import HeroSection from "./hero-section";
+import HeroSection from "./user-profile";
 import Footer from "@/components/footer";
 
 const Profile = ({ params }: { params: { id: any } }) => {

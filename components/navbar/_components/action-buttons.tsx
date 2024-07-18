@@ -116,12 +116,6 @@ const ActionButtons = () => {
               Connect
             </Button>
           )}
-          {/* <Link href={"/contact"}> */}
-          {/* <Button className="hidden lg:block" onClick={login}>
-            Profile
-          </Button> */}
-
-          {/* </Link> */}
         </div>
       </div>
 

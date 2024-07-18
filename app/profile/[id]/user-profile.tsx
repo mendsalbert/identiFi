@@ -91,7 +91,7 @@ const tabs = [
   },
 ];
 
-const HeroSection = (params: any) => {
+const UserProfile = (params: any) => {
   const [formData, setFormData] = useState<any>({
     first_name: "",
     last_name: "",
@@ -172,7 +172,6 @@ const HeroSection = (params: any) => {
 
   return (
     <div className="md:items-center items-center flex flex-col w-full">
-      {/* <BackgroundGradientAnimation className="md:items-center flex flex-col"> */}
       <div className="flex flex-col items-center">
         <div className="id-card-tag"></div>
         <div className="id-card-tag-strip"></div>
@@ -342,4 +341,4 @@ const HeroSection = (params: any) => {
   );
 };
 
-export default HeroSection;
+export default UserProfile;
