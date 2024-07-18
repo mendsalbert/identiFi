@@ -1,13 +1,13 @@
 const { expect } = require("chai");
-const { ethers } = require("hardhat");
+const hre = require("hardhat");
 
 describe("IdentiFi", function () {
   let identiFi;
   let owner, user1, user2;
 
   beforeEach(async function () {
-    [owner, user1, user2] = await ethers.getSigners();
-    const IdentiFi = await ethers.getContractFactory("IdentiFi");
+    [owner, user1, user2] = await hre.ethers.getSigners();
+    const IdentiFi = await hre.ethers.getContractFactory("IdentiFi");
     identiFi = await IdentiFi.deploy();
     await identiFi.deployed();
   });
