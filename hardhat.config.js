@@ -39,3 +39,5 @@ module.exports = {
   throwOnCallFailures: true,
   loggingEnabled: true,
 };
+
+// npx hardhat ignition deploy ./ignition/modules/Lock.js --network BitTorrent

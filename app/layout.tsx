@@ -1,32 +1,32 @@
 "use client";
 import { defineChain } from "viem";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import WagmiProviderComp from "./lib/wagmi-provider";
-import { config } from "./lib/config";
-import { headers } from "next/headers";
-import { cookieToInitialState } from "wagmi";
+// import WagmiProviderComp from "./lib/wagmi-provider";
+// import { config } from "./lib/config";
+// import { headers } from "next/headers";
+// import { cookieToInitialState } from "wagmi";
 
 import { PrivyProvider } from "@privy-io/react-auth";
 const font = Outfit({ subsets: ["latin"] });
 
-const zkEVMCardonaTestnet = defineChain({
-  id: 2442,
-  name: "Polygon zkEVM Cardona Testnet",
-  network: "Polygon zkEVM Cardona Testnet",
+const BitTorrent = defineChain({
+  id: 1029,
+  name: "BitTorrent Chain Donau",
+  network: "BitTorrent Chain Donau",
   nativeCurrency: {
     decimals: 18,
-    name: "Polygon zkEVM Cardona Testnet",
-    symbol: "ETH",
+    name: "BitTorrent Chain Donau",
+    symbol: "BTTC",
   },
   rpcUrls: {
     default: {
-      http: ["https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public"],
+      http: ["https://pre-rpc.bt.io/"],
     },
   } as any,
   blockExplorers: {
-    default: { name: "Explorer", url: "https://cardona-zkevm.polygonscan.com" },
+    default: { name: "Explorer", url: "https://testscan.bt.io" },
   },
 }) as any;
 
@@ -49,8 +49,8 @@ export default function RootLayout({
             embeddedWallets: {
               createOnLogin: "users-without-wallets",
             },
-            defaultChain: zkEVMCardonaTestnet,
-            supportedChains: [zkEVMCardonaTestnet],
+            defaultChain: BitTorrent,
+            supportedChains: [BitTorrent],
           }}
         >
           {children}

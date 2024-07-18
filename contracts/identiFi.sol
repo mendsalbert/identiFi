@@ -22,7 +22,7 @@ contract IdentiFi {
         string[] skills;
         string imageURL;
         bool exists;
-        uint[] appliedJobs; // Array to store applied job IDs
+        uint[] appliedJobs; 
         Visibility visibility;
     }
 
@@ -178,16 +178,6 @@ contract IdentiFi {
 
     function getUsernameByAddress(address userAddress) public view returns (string memory) {
         return addressToUsername[userAddress];
-    }
-
-    function addJob(string memory username, uint jobId) public {
-        require(users[username].exists, "User does not exist.");
-        users[username].appliedJobs.push(jobId);
-    }
-
-    function getJobs(string memory username) public view returns (uint[] memory) {
-        require(users[username].exists, "User does not exist.");
-        return users[username].appliedJobs;
     }
 
     function setVisibility(
