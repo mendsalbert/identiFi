@@ -1,116 +1,116 @@
-<h1 align="center">identiFi</h1>
+<div align="center">
+  <br />
+    <a href="https://www.youtube.com/watch?v=OpL5Q7Zc7qk" target="_blank">
+      <img src="https://i.postimg.cc/26LnpVqZ/test1-copy.jpg" alt="Project Banner">
+    </a>
+  
+  <br />
 
-<p align="center">
-    <a href="https://www.youtube.com/watch?v=OpL5Q7Zc7qk" title="">🖥️ Video</a>
-    .
-    <a href="https://github.com/blocklinklabs/IdentiFi" title="">📂 Repo</a>
-    ·
-    <a href="https://github.com/blocklinklabs/IdentiFi/issues" title="🐛Report Bug/🎊Request Feature">🚀 Got Issue</a>
-</p>
-<a href="" title="Project Initiator">
-    <img src="./public/prev.png" width="100%" alt="Project Initiator"/>
-</a>
+  <div>
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+  </div>
 
-## Inspiration 💡
+  <h3 align="center">identiFi</h3>
+
+   <div align="center">
+     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@albertmends" target="_blank"><b>Your YouTube Channel</b></a>. Join the community!
+    </div>
+</div>
+
+## 📋 <a name="table">Table of Contents</a>
+
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🕸️ [Smart Contract Overview](#smart-contract-overview)
+6. 🖼️ [Storing Images on IPFS](#storing-images-on-ipfs)
+7. 🚀 [More](#more)
+
+## 🚨 Tutorial
+
+This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@albertmends/videos" target="_blank"><b>Code with Albert</b></a>.
+
+If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
+
+## <a name="introduction">🤖 Introduction</a>
 
 The current digital identity landscape is often fragmented and insecure, making it challenging for users to manage and verify their identities across different platforms. identiFi was inspired by the potential of blockchain technology to create a unified, secure, and verifiable digital identity solution that empowers users to manage their identities seamlessly.
 
-## What it Does ⚙️
+## <a name="tech-stack">⚙️ Tech Stack</a>
 
-identiFi introduces a revolutionary approach to digital identity management by leveraging blockchain technology to ensure privacy, security, and authenticity:
+- Next.js
+- TypeScript
+- Solidity
+- Hardhat
+- Chainlink VRF
+- IPFS
+
+## <a name="features">🔋 Features</a>
 
 - **Decentralized Identifiers (DIDs):** Create and manage unique DIDs on the blockchain.
 - **Identity Verification:** Submit identity documents for verification by trusted third parties.
-- **Credential Verification:** Verify the authenticity of credentials
+- **Credential Verification:** Verify the authenticity of credentials.
 - **User Profile Management:** Update personal details and manage credentials easily.
 - **Privacy Controls:** Control who can access identity information and under what circumstances.
 - **Security Measures:** Strong security measures including encryption and secure key management.
 - **Social Media Integration:** Share your verified digital identity on various social media platforms.
 - **Profile Editing:** Easily update and manage your digital identity profile.
 
-## How We Built It 🛠️
+## <a name="quick-start">🤸 Quick Start</a>
 
-identiFi is developed using the latest in blockchain and decentralized storage technology:
+Follow these steps to set up the project locally on your machine.
 
-- **Blockchain Backend:** Developed using Solidity, smart contracts on Ethereum provide a secure and decentralized backend for identity management.
-- **Monobean:** Utilized for batch transactions, ensuring efficient and cost-effective operations.
-- **Chainlink VRF:** Used to generate unique DIDs for users.
-- **IPFS:** All user images are stored on IPFS to ensure decentralized and secure storage.
+**Prerequisites**
 
-### Prerequisite
+Make sure you have the following installed on your machine:
 
-- [Nodejs](https://nodejs.org/en// "Node") Installed
-- [Git](https://git-scm.com/ "Git OFficial") Installed
-- [npm](https://www.npmjs.com/ "npm ") Installed
-- [Hardhat](https://hardhat.org/ "Hardhat ") Installed
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/)
+- [Hardhat](https://hardhat.org/)
 - Metamask (or any other Ethereum wallet)
 - Chainlink VRF setup
 - IPFS setup
 
-### Installation Steps
-
-1. Clone the repository
+**Cloning the Repository**
 
 ```bash
 git clone https://github.com/blocklinklabs/IdentiFi.git
 cd identifi
 ```
 
-2. Install Dependencies
+**Installation**
+
+Install the project dependencies using npm:
 
 ```bash
 npm install
 ```
 
-3. Compile the Contracts
+**Compile the Contracts**
 
 ```bash
 npx hardhat compile
 ```
 
-4. Deploy the Contracts
+**Deploy the Contracts**
 
 ```bash
 npx hardhat run scripts/deploy.js --network yourNetwork
 ```
 
-5. Run the Development Server
+**Run the Development Server**
 
 ```bash
 npm start
 ```
 
-6. Open the App
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-Navigate to `http://localhost:3000` in your web browser.
-
-**🎇 You are Ready to Go!**
-
-## Configuration
-
-To deploy to a test or main network, update the configurations located in `hardhat.config.js` to use a private key and, optionally, deploy to a private RPC like Infura.
-
-```javascript
-require("@nomiclabs/hardhat-waffle");
-const { ethers } = require("ethers");
-const privateKey = wallet.privateKey;
-
-module.exports = {
-  defaultNetwork: "hardhat",
-  networks: {
-    zkEVMCardonaTestnet: {
-      url: "https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public",
-      accounts: [privateKey],
-    },
-  },
-  solidity: "0.8.24",
-  allowUnlimitedContractSize: true,
-  throwOnTransactionFailures: true,
-  throwOnCallFailures: true,
-};
-```
-
-## Smart Contract Overview
+## <a name="smart-contract-overview">🕸️ Smart Contract Overview</a>
 
 The main contract, `IdentiFi`, manages user profiles, DIDs, and credentials.
 
@@ -126,11 +126,13 @@ The main contract, `IdentiFi`, manages user profiles, DIDs, and credentials.
 - **getVisibility:** Gets visibility preferences for user profile information.
 - **batchCreateUsers:** Batch creates multiple user profiles using Monobean.
 
-## Storing Images on IPFS
+## <a name="storing-images-on-ipfs">🖼️ Storing Images on IPFS</a>
 
 User images are uploaded and stored on IPFS. This ensures that images are stored in a decentralized manner, enhancing security and accessibility.
 
-## Contributing
+## <a name="more">🚀 More</a>
+
+For more information and additional resources, check out our YouTube channel and join our Discord community for support and discussions.
 
 We welcome contributions to identiFi! To contribute, please follow these steps:
 
@@ -139,7 +141,5 @@ We welcome contributions to identiFi! To contribute, please follow these steps:
 3. Make your changes and commit them.
 4. Push your changes to your fork.
 5. Submit a pull request to the main repository.
-
-## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
